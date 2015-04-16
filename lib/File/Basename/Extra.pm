@@ -114,13 +114,15 @@ C<basename>, i.e., it uses the last last level of a filepath as
 filename, even if the last level is clearly directory.
 
 Also, like C<basename>, files that consist of only a matched suffix
-are treated as is they do not have a suffix. So, using the default
+are treated as if they do not have a suffix. So, using the default
 suffix pattern, C<basename_suffix('/Users/home/.profile')> would
 return an empty string.
 
-Note: Like the original basename function from L<File::Basename>,
-search patterns are automatically escaped (this is B<not> done for the
-default suffix patterns!).
+Note: Like the original C<basename> function from L<File::Basename>,
+suffix patterns are automatically escaped so pattern C<.bar> only
+matches C<.bar> and not e.g., C<_bar> (this is B<not> done for the
+default suffix patterns, nor for patterns provided to the non-basename
+family functions of this module!).
 
 =cut
 
@@ -138,13 +140,15 @@ that the default suffix patterns are used to strip the name of its
 suffixes when none are provided.
 
 Also, like C<basename>, files that consist of only a matched suffix
-are treated as is they do not have a suffix. So, using the default
+are treated as if they do not have a suffix. So, using the default
 suffix pattern, C<basename_nosuffix('/Users/home/.profile')> would
 return C<.profile>.
 
-Note: Like the original basename function from L<File::Basename>,
-search patterns are automatically escaped (this is B<not> done for the
-default suffix patterns!).
+Note: Like the original C<basename> function from L<File::Basename>,
+suffix patterns are automatically escaped so pattern C<.bar> only
+matches C<.bar> and not e.g., C<_bar> (this is B<not> done for the
+default suffix patterns, nor for patterns provided to the non-basename
+family of functions of this module!).
 
 =cut
 
@@ -157,7 +161,9 @@ sub basename_nosuffix {
 
 =func filename FILEPATH PATTERN_LIST
 
-Returns just the filename of the filepath, optionally stripping the suffix when it matches a provided suffix patterns. Basically the same as calling C<fileparse> in scalar context.
+Returns just the filename of the filepath, optionally stripping the
+suffix when it matches a provided suffix patterns. Basically the same
+as calling C<fileparse> in scalar context.
 
 =cut
 
@@ -170,7 +176,8 @@ sub filename {
 
 =func filename_suffix FILEPATH PATTERN_LIST
 
-Returns the matched suffix of the filename. The default suffix patterns are used when none are provided.
+Returns the matched suffix of the filename. The default suffix
+patterns are used when none are provided.
 
 =cut
 
@@ -184,7 +191,8 @@ sub filename_suffix {
 
 =func filename_nosuffix FILEPATH PATTERN_LIST
 
-Returns the filename with the the matched suffix stripped. The default suffix patterns are used when none are provided.
+Returns the filename with the the matched suffix stripped. The default
+suffix patterns are used when none are provided.
 
 =cut
 
@@ -211,7 +219,8 @@ sub pathname {
 
 =func fullname FILEPATH PATTERN_LIST
 
-Returns the provided filepath, optionally stripping the filename of its matching suffix.
+Returns the provided filepath, optionally stripping the filename of
+its matching suffix.
 
 =cut
 
@@ -234,7 +243,8 @@ Synonym for filename_suffix.
 
 =func fullname_nosuffix FILEPATH PATTERN_LIST
 
-Returns the full filepath with the the matched suffix stripped. The default suffix patterns are used when none are provided.
+Returns the full filepath with the the matched suffix stripped. The
+default suffix patterns are used when none are provided.
 
 =cut
 
