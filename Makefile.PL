@@ -22,7 +22,7 @@ my %WriteMakefileArgs = (
   "MIN_PERL_VERSION" => "5.006",
   "NAME" => "File::Basename::Extra",
   "PREREQ_PM" => {
-    "File::Basename" => 0,
+    "File::Basename" => "2.74",
     "strict" => 0,
     "warnings" => 0
   },
@@ -32,7 +32,7 @@ my %WriteMakefileArgs = (
     "IPC::Open3" => 0,
     "Test::More" => 0
   },
-  "VERSION" => "0.001",
+  "VERSION" => "0.002",
   "test" => {
     "TESTS" => "t/*.t"
   }
@@ -41,7 +41,7 @@ my %WriteMakefileArgs = (
 
 my %FallbackPrereqs = (
   "ExtUtils::MakeMaker" => 0,
-  "File::Basename" => 0,
+  "File::Basename" => "2.74",
   "File::Spec" => 0,
   "IO::Handle" => 0,
   "IPC::Open3" => 0,

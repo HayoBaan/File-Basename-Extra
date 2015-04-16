@@ -5,7 +5,7 @@ NAME
 
 VERSION
 
-    version 0.001
+    version 0.002
 
 SYNOPSIS
 
@@ -72,13 +72,15 @@ FUNCTIONS
     even if the last level is clearly directory.
 
     Also, like basename, files that consist of only a matched suffix are
-    treated as is they do not have a suffix. So, using the default suffix
+    treated as if they do not have a suffix. So, using the default suffix
     pattern, basename_suffix('/Users/home/.profile') would return an empty
     string.
 
-    Note: Like the original basename function from File::Basename, search
-    patterns are automatically escaped (this is not done for the default
-    suffix patterns!).
+    Note: Like the original basename function from File::Basename, suffix
+    patterns are automatically escaped so pattern .bar only matches .bar
+    and not e.g., _bar (this is not done for the default suffix patterns,
+    nor for patterns provided to the non-basename family functions of this
+    module!).
 
  basename_nosuffix FILEPATH
 
@@ -89,13 +91,15 @@ FUNCTIONS
     when none are provided.
 
     Also, like basename, files that consist of only a matched suffix are
-    treated as is they do not have a suffix. So, using the default suffix
+    treated as if they do not have a suffix. So, using the default suffix
     pattern, basename_nosuffix('/Users/home/.profile') would return
     .profile.
 
-    Note: Like the original basename function from File::Basename, search
-    patterns are automatically escaped (this is not done for the default
-    suffix patterns!).
+    Note: Like the original basename function from File::Basename, suffix
+    patterns are automatically escaped so pattern .bar only matches .bar
+    and not e.g., _bar (this is not done for the default suffix patterns,
+    nor for patterns provided to the non-basename family of functions of
+    this module!).
 
  filename FILEPATH
 
@@ -123,7 +127,7 @@ FUNCTIONS
 
     Returns the path part of the file. Contrary to dirname, a filepath that
     is clearly a directory, is treated as such (e.g., on Unix,
-    pathname('/Foo/bar/') returns /Foo/bar).
+    pathname('/foo/bar/') returns /foo/bar/).
 
  fullname FILEPATH
 
