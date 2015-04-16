@@ -20,13 +20,13 @@ my %module_build_args = (
     "Hayo Baan <info\@hayobaan.com>"
   ],
   "dist_name" => "File-Basename-Extra",
-  "dist_version" => "0.001",
+  "dist_version" => "0.002",
   "license" => "perl",
   "module_name" => "File::Basename::Extra",
   "recommends" => {},
   "recursive_test_files" => 1,
   "requires" => {
-    "File::Basename" => 0,
+    "File::Basename" => "2.74",
     "perl" => "5.006",
     "strict" => 0,
     "warnings" => 0
