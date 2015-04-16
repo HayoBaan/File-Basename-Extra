@@ -49,7 +49,7 @@ L<File::Basename> for the suffix matching and platform specific details.
 
 =cut
 
-use File::Basename;
+use File::Basename 2.74; # For _strip_trailing_sep
 
 our @ISA = qw(Exporter File::Basename);
 our @EXPORT = ();
