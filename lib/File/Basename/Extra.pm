@@ -206,7 +206,7 @@ sub filename_nosuffix {
 
 Returns the path part of the file. Contrary to C<dirname>, a filepath
 that is clearly a directory, is treated as such (e.g., on Unix,
-C<pathname('/Foo/bar/')> returns C</Foo/bar>).
+C<pathname('/foo/bar/')> returns C</foo/bar/>).
 
 =cut
 
