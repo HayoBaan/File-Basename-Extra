@@ -5,7 +5,7 @@ NAME
 
 VERSION
 
-    version 0.002
+    version 0.003
 
 SYNOPSIS
 
@@ -168,7 +168,7 @@ FUNCTIONS
 BUGS
 
     Please report any bugs or feature requests on the bugtracker website
-    https://github.com/HayoBaan/File-Basename-Extra/issues
+    <https://github.com/HayoBaan/File-Basename-Extra/issues>.
 
     When submitting a bug or request, please include a test-file or a patch
     to an existing test-file that illustrates the bug or desired feature.
@@ -179,7 +179,7 @@ SEE ALSO
 
 AUTHOR
 
-    Hayo Baan <info@hayobaan.com>
+    Hayo Baan <hayobaan@cpan.org>
 
 COPYRIGHT AND LICENSE
 
