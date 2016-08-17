@@ -1,6 +1,7 @@
 Revision history for Perl module {{$dist->name}}
 
 {{$NEXT}}
+  * Added Travis and AppVeyor testing
 
 0.003     2016-08-10
   * Removed Build.PL, require >= v0.009 of PluginBundle
