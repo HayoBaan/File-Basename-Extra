@@ -1,10 +1,13 @@
+[![Build Status](https://travis-ci.org/HayoBaan/File-Basename-Extra.svg?branch=master)](https://travis-ci.org/HayoBaan/File-Basename-Extra)
+[![Kwalitee status](http://cpants.cpanauthors.org/dist/File-Basename-Extra.png)](http://cpants.charsbar.org/dist/overview/File-Basename-Extra)
+
 # NAME
 
 File::Basename::Extra - Extension to File::Basename, adds named access to file parts and handling of filename suffixes
 
 # VERSION
 
-version 0.003
+version 0.003\_001
 
 # SYNOPSIS
 
@@ -179,7 +182,7 @@ feature.
 
 # AUTHOR
 
-Hayo Baan <hayobaan@cpan.org>
+Hayo Baan <info@hayobaan.com>
 
 # COPYRIGHT AND LICENSE
 
