@@ -7,7 +7,7 @@ File::Basename::Extra - Extension to File::Basename, adds named access to file p
 
 # VERSION
 
-version 0.003\_001
+version 0.004
 
 # SYNOPSIS
 
