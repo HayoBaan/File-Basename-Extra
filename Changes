@@ -1,6 +1,7 @@
 Revision history for Perl module {{$dist->name}}
 
 {{$NEXT}}
+  * Adpated to use gmake instead of dmake
 
 0.004     2017-05-19
   * Added Travis and AppVeyor testing
