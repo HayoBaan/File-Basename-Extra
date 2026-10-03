@@ -6,7 +6,7 @@ File::Basename::Extra - Extension to File::Basename, adds named access to file p
 
 # VERSION
 
-version 0.006
+version 0.006\_001
 
 # SYNOPSIS
 
