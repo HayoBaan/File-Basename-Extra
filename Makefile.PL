@@ -8,7 +8,7 @@ use ExtUtils::MakeMaker;
 
 my %WriteMakefileArgs = (
   "ABSTRACT" => "Extension to File::Basename, adds named access to file parts and handling of filename suffixes",
-  "AUTHOR" => "Hayo Baan <info\@hayobaan.com>",
+  "AUTHOR" => "Hayo Baan (it at hayobaan.nl)",
   "CONFIGURE_REQUIRES" => {
     "ExtUtils::MakeMaker" => 0
   },
