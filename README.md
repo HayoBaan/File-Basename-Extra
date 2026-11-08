@@ -43,8 +43,7 @@ version 0.006\_001
 
 # DESCRIPTION
 
-This module provides functionalty for handling file name suffixes (aka
-file name extensions).
+This module provides functionalty for handling file name suffixes (aka file name extensions).
 
 # FUNCTIONS
 
@@ -60,82 +59,75 @@ file name extensions).
 
 ## fileparse\_set\_fstype FSTYPE
 
-These functions are exactly the same as the corresponding ones from
-[File::Basename](https://metacpan.org/pod/File%3A%3ABasename) except that they aren't exported by default.
+These functions are exactly the same as the corresponding ones from [File::Basename](https://metacpan.org/pod/File%3A%3ABasename) except that
+they aren't exported by default.
 
 ## basename\_suffix FILEPATH
 
 ## basename\_suffix FILEPATH PATTERN\_LIST
 
-Returns the file name suffix part of the given filepath. The default
-suffix patterns are used if none are provided. Behaves the same as
-`basename`, i.e., it uses the last last level of a filepath as
-filename, even if the last level is clearly directory.
+Returns the file name suffix part of the given filepath. The default suffix patterns are used if
+none are provided. Behaves the same as `basename`, i.e., it uses the last last level of a filepath
+as filename, even if the last level is clearly directory.
 
-Also, like `basename`, files that consist of only a matched suffix
-are treated as if they do not have a suffix. So, using the default
-suffix pattern, `basename_suffix('/Users/home/.profile')` would
-return an empty string.
+Also, like `basename`, files that consist of only a matched suffix are treated as if they do not
+have a suffix. So, using the default suffix pattern, `basename_suffix('/Users/home/.profile')`
+would return an empty string.
 
-Note: Like the original `basename` function from [File::Basename](https://metacpan.org/pod/File%3A%3ABasename),
-suffix patterns are automatically escaped so pattern `.bar` only
-matches `.bar` and not e.g., `_bar` (this is **not** done for the
-default suffix patterns, nor for patterns provided to the non-basename
-family functions of this module!).
+Note: Like the original `basename` function from [File::Basename](https://metacpan.org/pod/File%3A%3ABasename), suffix patterns are
+automatically escaped. So pattern `.bar` only matches `.bar` and not e.g., `_bar`.
+
+This is **not** done for the default suffix patterns, nor for patterns provided to the non-basename
+family functions of this module!
 
 ## basename\_nosuffix FILEPATH
 
 ## basename\_nosuffix FILEPATH PATTERN\_LIST
 
-Acts basically the same as the original `basename` function, except
-that the default suffix patterns are used to strip the name of its
-suffixes when none are provided.
+Acts basically the same as the original `basename` function, except that the default suffix
+patterns are used to strip the name of its suffixes when none are provided.
 
-Also, like `basename`, files that consist of only a matched suffix
-are treated as if they do not have a suffix. So, using the default
-suffix pattern, `basename_nosuffix('/Users/home/.profile')` would
-return `.profile`.
+Also, like `basename`, files that consist of only a matched suffix are treated as if they do not
+have a suffix. So, using the default suffix pattern, `basename_nosuffix('/Users/home/.profile')`
+would return `.profile`.
 
-Note: Like the original `basename` function from [File::Basename](https://metacpan.org/pod/File%3A%3ABasename),
-suffix patterns are automatically escaped so pattern `.bar` only
-matches `.bar` and not e.g., `_bar` (this is **not** done for the
-default suffix patterns, nor for patterns provided to the non-basename
-family of functions of this module!).
+Note: Like the original `basename` function from [File::Basename](https://metacpan.org/pod/File%3A%3ABasename), suffix patterns are
+automatically escaped. So pattern `.bar` only matches `.bar` and not e.g., `_bar`.
+
+This is **not** done for the default suffix patterns, nor for patterns provided to the non-basename
+family functions of this module!
 
 ## filename FILEPATH
 
 ## filename FILEPATH PATTERN\_LIST
 
-Returns just the filename of the filepath, optionally stripping the
-suffix when it matches a provided suffix patterns. Basically the same
-as calling `fileparse` in scalar context.
+Returns just the filename of the filepath, optionally stripping the suffix when it matches a
+provided suffix patterns. Basically the same as calling `fileparse` in scalar context.
 
 ## filename\_suffix FILEPATH
 
 ## filename\_suffix FILEPATH PATTERN\_LIST
 
-Returns the matched suffix of the filename. The default suffix
-patterns are used when none are provided.
+Returns the matched suffix of the filename. The default suffix patterns are used when none are
+provided.
 
 ## filename\_nosuffix FILEPATH
 
 ## filename\_nosuffix FILEPATH PATTERN\_LIST
 
-Returns the filename with the the matched suffix stripped. The default
-suffix patterns are used when none are provided.
+Returns the filename with the the matched suffix stripped. The default suffix patterns are used when
+none are provided.
 
 ## pathname FILEPATH
 
-Returns the path part of the file. Contrary to `dirname`, a filepath
-that is clearly a directory, is treated as such (e.g., on Unix,
-`pathname('/foo/bar/')` returns `/foo/bar/`).
+Returns the path part of the file. Contrary to `dirname`, a filepath that is clearly a directory,
+is treated as such (e.g., on Unix, `pathname('/foo/bar/')` returns `/foo/bar/`).
 
 ## fullname FILEPATH
 
 ## fullname FILEPATH PATTERN\_LIST
 
-Returns the provided filepath, optionally stripping the filename of
-its matching suffix.
+Returns the provided filepath, optionally stripping the filename of its matching suffix.
 
 ## fullname\_suffix FILEPATH
 
@@ -147,24 +139,21 @@ Synonym for filename\_suffix.
 
 ## fullname\_nosuffix FILEPATH PATTERN\_LIST
 
-Returns the full filepath with the the matched suffix stripped. The
-default suffix patterns are used when none are provided.
+Returns the full filepath with the the matched suffix stripped. The default suffix patterns are used
+when none are provided.
 
 ## default\_suffix\_patterns
 
 ## default\_suffix\_patterns NEW\_PATTERN\_LIST
 
-The default suffix pattern list (see the `fileparse` function in
-[File::Basename](https://metacpan.org/pod/File%3A%3ABasename) for details) is `qr/\.[^.]*/`. Meaning that this
-defines the suffix as the part of the filename from (and including)
-the last dot. In other words, the part of a filename that is popularly
-known as the file extension.
+The default suffix pattern list (see the `fileparse` function in [File::Basename](https://metacpan.org/pod/File%3A%3ABasename) for details) is
+`qr/\.[^.]*/`. Meaning that this defines the suffix as the part of the filename from (and
+including) the last dot. In other words, the part of a filename that is popularly known as the file
+extension.
 
-You can alter the suffix matching by proving this function with a
-different pattern list.
+You can alter the suffix matching by proving this function with a different pattern list.
 
-This function returns the pattern list that was effective _before_
-optionally changing it.
+This function returns the pattern list that was effective _before_ optionally changing it.
 
 # BUGS
 

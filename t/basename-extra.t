@@ -7,8 +7,8 @@ use Test::More tests => 78;
 # Be lazy and have everything exported
 use File::Basename::Extra @File::Basename::Extra::EXPORT_OK;
 
-# We do not need to retest the original File::Basename functions so we
-# can concentrate just on the new bits
+# We do not need to retest the original File::Basename functions so we can concentrate just on the
+# new bits
 
 # Run tests using Unix file system logic
 ok length fileparse_set_fstype('Unix'), 'Set fstype to Unix';

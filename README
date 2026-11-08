@@ -77,10 +77,11 @@ FUNCTIONS
     string.
 
     Note: Like the original basename function from File::Basename, suffix
-    patterns are automatically escaped so pattern .bar only matches .bar
-    and not e.g., _bar (this is not done for the default suffix patterns,
-    nor for patterns provided to the non-basename family functions of this
-    module!).
+    patterns are automatically escaped. So pattern .bar only matches .bar
+    and not e.g., _bar.
+
+    This is not done for the default suffix patterns, nor for patterns
+    provided to the non-basename family functions of this module!
 
  basename_nosuffix FILEPATH
 
@@ -96,10 +97,11 @@ FUNCTIONS
     .profile.
 
     Note: Like the original basename function from File::Basename, suffix
-    patterns are automatically escaped so pattern .bar only matches .bar
-    and not e.g., _bar (this is not done for the default suffix patterns,
-    nor for patterns provided to the non-basename family of functions of
-    this module!).
+    patterns are automatically escaped. So pattern .bar only matches .bar
+    and not e.g., _bar.
+
+    This is not done for the default suffix patterns, nor for patterns
+    provided to the non-basename family functions of this module!
 
  filename FILEPATH
 
